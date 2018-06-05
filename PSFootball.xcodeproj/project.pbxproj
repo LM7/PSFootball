@@ -16,7 +16,7 @@
 		ED2562A420C57BEE004A6901 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED2562A220C57BEE004A6901 /* LaunchScreen.storyboard */; };
 		ED9C08EC20C6C04500E35E1E /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = ED9C08EB20C6C04500E35E1E /* Debug.xcconfig */; };
 		ED9C08EE20C6C05400E35E1E /* Test.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = ED9C08ED20C6C05400E35E1E /* Test.xcconfig */; };
-		ED9C08F020C6C06100E35E1E /* Prod.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = ED9C08EF20C6C06100E35E1E /* Prod.xcconfig */; };
+		ED9C08F020C6C06100E35E1E /* Release_Prod.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = ED9C08EF20C6C06100E35E1E /* Release_Prod.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +35,7 @@
 		ED2562A520C57BEE004A6901 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED9C08EB20C6C04500E35E1E /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		ED9C08ED20C6C05400E35E1E /* Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Test.xcconfig; sourceTree = "<group>"; };
-		ED9C08EF20C6C06100E35E1E /* Prod.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Prod.xcconfig; sourceTree = "<group>"; };
+		ED9C08EF20C6C06100E35E1E /* Release_Prod.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release_Prod.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 			children = (
 				ED9C08EB20C6C04500E35E1E /* Debug.xcconfig */,
 				ED9C08ED20C6C05400E35E1E /* Test.xcconfig */,
-				ED9C08EF20C6C06100E35E1E /* Prod.xcconfig */,
+				ED9C08EF20C6C06100E35E1E /* Release_Prod.xcconfig */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -174,7 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED9C08EC20C6C04500E35E1E /* Debug.xcconfig in Resources */,
-				ED9C08F020C6C06100E35E1E /* Prod.xcconfig in Resources */,
+				ED9C08F020C6C06100E35E1E /* Release_Prod.xcconfig in Resources */,
 				ED2562A420C57BEE004A6901 /* LaunchScreen.storyboard in Resources */,
 				ED2562A120C57BEE004A6901 /* Assets.xcassets in Resources */,
 				ED25629C20C57BEC004A6901 /* Main.storyboard in Resources */,
@@ -206,9 +206,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PSFootball/Pods-PSFootball-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -331,7 +334,7 @@
 		};
 		ED2562A720C57BEE004A6901 /* Release_Prod */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED9C08EF20C6C06100E35E1E /* Prod.xcconfig */;
+			baseConfigurationReference = ED9C08EF20C6C06100E35E1E /* Release_Prod.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -392,10 +395,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 48M6ZH39G5;
 				INFOPLIST_FILE = PSFootball/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.coco.PSFootball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -405,16 +405,13 @@
 		};
 		ED2562AA20C57BEE004A6901 /* Release_Prod */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED9C08EF20C6C06100E35E1E /* Prod.xcconfig */;
+			baseConfigurationReference = ED9C08EF20C6C06100E35E1E /* Release_Prod.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 48M6ZH39G5;
 				INFOPLIST_FILE = PSFootball/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.coco.PSFootball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -491,10 +488,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 48M6ZH39G5;
 				INFOPLIST_FILE = PSFootball/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.coco.PSFootball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
