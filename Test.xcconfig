@@ -1,0 +1,11 @@
+//
+//  Test.xcconfig
+//  PSFootball
+//
+//  Created by Lorenzo on 05/06/18.
+//  Copyright © 2018 Lorenzo. All rights reserved.
+//
+
+APP_NAME = PSFootballTest
+APP_VERSION = 1.0
+APP_BUNDLE_ID = com.coco.PSFootballTest
