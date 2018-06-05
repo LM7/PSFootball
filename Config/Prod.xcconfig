@@ -5,6 +5,7 @@
 //  Created by Lorenzo on 05/06/18.
 //  Copyright © 2018 Lorenzo. All rights reserved.
 //
+#include "Pods/Target Support Files/Pods-PSFootball/Pods-PSFootball.Prod.xcconfig"
 
 APP_NAME = PSFootball
 APP_VERSION = 1.0

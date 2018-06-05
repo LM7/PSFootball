@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		483D905A182DDC2AA5798632 /* Pods_PSFootball.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98479D061D92382784F96DDA /* Pods_PSFootball.framework */; };
+		DAD557DD33F2A1FABD76E9C1 /* Pods_PSFootball.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98479D061D92382784F96DDA /* Pods_PSFootball.framework */; };
 		ED25629720C57BEC004A6901 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED25629620C57BEC004A6901 /* AppDelegate.swift */; };
 		ED25629920C57BEC004A6901 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED25629820C57BEC004A6901 /* ViewController.swift */; };
 		ED25629C20C57BEC004A6901 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED25629A20C57BEC004A6901 /* Main.storyboard */; };
@@ -43,7 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				483D905A182DDC2AA5798632 /* Pods_PSFootball.framework in Frameworks */,
+				DAD557DD33F2A1FABD76E9C1 /* Pods_PSFootball.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,9 +72,7 @@
 		ED25628A20C57BEC004A6901 = {
 			isa = PBXGroup;
 			children = (
-				ED9C08EB20C6C04500E35E1E /* Debug.xcconfig */,
-				ED9C08ED20C6C05400E35E1E /* Test.xcconfig */,
-				ED9C08EF20C6C06100E35E1E /* Prod.xcconfig */,
+				ED7534A720C6D480001B7463 /* Config */,
 				22B6598CAF2509E293CC1C61 /* Frameworks */,
 				DF4D583702356A33C574AFE7 /* Pods */,
 				ED25629420C57BEC004A6901 /* Products */,
@@ -102,6 +100,16 @@
 				ED25629D20C57BEC004A6901 /* PSFootball.xcdatamodeld */,
 			);
 			path = PSFootball;
+			sourceTree = "<group>";
+		};
+		ED7534A720C6D480001B7463 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				ED9C08EB20C6C04500E35E1E /* Debug.xcconfig */,
+				ED9C08ED20C6C05400E35E1E /* Test.xcconfig */,
+				ED9C08EF20C6C06100E35E1E /* Prod.xcconfig */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
