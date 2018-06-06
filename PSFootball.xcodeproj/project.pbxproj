@@ -14,18 +14,22 @@
 		ED25629F20C57BEC004A6901 /* PSFootball.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED25629D20C57BEC004A6901 /* PSFootball.xcdatamodeld */; };
 		ED2562A120C57BEE004A6901 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED2562A020C57BEE004A6901 /* Assets.xcassets */; };
 		ED2562A420C57BEE004A6901 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED2562A220C57BEE004A6901 /* LaunchScreen.storyboard */; };
-		ED9C08EC20C6C04500E35E1E /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = ED9C08EB20C6C04500E35E1E /* Debug.xcconfig */; };
-		ED9C08EE20C6C05400E35E1E /* Test.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = ED9C08ED20C6C05400E35E1E /* Test.xcconfig */; };
-		ED9C08F020C6C06100E35E1E /* Release_Prod.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = ED9C08EF20C6C06100E35E1E /* Release_Prod.xcconfig */; };
+		ED58B09520C815A600A81131 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED58B09420C815A600A81131 /* Config.swift */; };
+		ED58B09820C816BE00A81131 /* PSFootballHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED58B09720C816BE00A81131 /* PSFootballHelper.swift */; };
+		ED58B09B20C8176800A81131 /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED58B09A20C8176800A81131 /* Enumerations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		06F0A7CC2936866B37AFDC51 /* Pods-PSFootball.release_prod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PSFootball.release_prod.xcconfig"; path = "Pods/Target Support Files/Pods-PSFootball/Pods-PSFootball.release_prod.xcconfig"; sourceTree = "<group>"; };
+		20B7993DD892F845B6360948 /* Pods-PSFootball.prod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PSFootball.prod.xcconfig"; path = "Pods/Target Support Files/Pods-PSFootball/Pods-PSFootball.prod.xcconfig"; sourceTree = "<group>"; };
+		31D43339101BCC612719C5BB /* Pods-PSFootball.coll.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PSFootball.coll.xcconfig"; path = "Pods/Target Support Files/Pods-PSFootball/Pods-PSFootball.coll.xcconfig"; sourceTree = "<group>"; };
 		4F8BC588CD98B157D793067E /* Pods-PSFootball.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PSFootball.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PSFootball/Pods-PSFootball.debug.xcconfig"; sourceTree = "<group>"; };
 		51FDD077462DCEDA62A14AC5 /* Pods-PSFootball.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PSFootball.release.xcconfig"; path = "Pods/Target Support Files/Pods-PSFootball/Pods-PSFootball.release.xcconfig"; sourceTree = "<group>"; };
+		6B681EA4B502E9889B06D500 /* Pods-PSFootball.release_coll.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PSFootball.release_coll.xcconfig"; path = "Pods/Target Support Files/Pods-PSFootball/Pods-PSFootball.release_coll.xcconfig"; sourceTree = "<group>"; };
+		6D2EB7C94215E772A5B18494 /* Pods-PSFootball.release_test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PSFootball.release_test.xcconfig"; path = "Pods/Target Support Files/Pods-PSFootball/Pods-PSFootball.release_test.xcconfig"; sourceTree = "<group>"; };
 		98479D061D92382784F96DDA /* Pods_PSFootball.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PSFootball.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB81A777E31D38CFB3137847 /* Pods-PSFootball.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PSFootball.test.xcconfig"; path = "Pods/Target Support Files/Pods-PSFootball/Pods-PSFootball.test.xcconfig"; sourceTree = "<group>"; };
-		ED25629320C57BEC004A6901 /* PSFootball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PSFootball.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED25629320C57BEC004A6901 /* PSFootballTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PSFootballTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED25629620C57BEC004A6901 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED25629820C57BEC004A6901 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ED25629B20C57BEC004A6901 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -33,9 +37,9 @@
 		ED2562A020C57BEE004A6901 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED2562A320C57BEE004A6901 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED2562A520C57BEE004A6901 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ED9C08EB20C6C04500E35E1E /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
-		ED9C08ED20C6C05400E35E1E /* Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Test.xcconfig; sourceTree = "<group>"; };
-		ED9C08EF20C6C06100E35E1E /* Release_Prod.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release_Prod.xcconfig; sourceTree = "<group>"; };
+		ED58B09420C815A600A81131 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		ED58B09720C816BE00A81131 /* PSFootballHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSFootballHelper.swift; sourceTree = "<group>"; };
+		ED58B09A20C8176800A81131 /* Enumerations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,10 @@
 				51FDD077462DCEDA62A14AC5 /* Pods-PSFootball.release.xcconfig */,
 				AB81A777E31D38CFB3137847 /* Pods-PSFootball.test.xcconfig */,
 				06F0A7CC2936866B37AFDC51 /* Pods-PSFootball.release_prod.xcconfig */,
+				31D43339101BCC612719C5BB /* Pods-PSFootball.coll.xcconfig */,
+				20B7993DD892F845B6360948 /* Pods-PSFootball.prod.xcconfig */,
+				6B681EA4B502E9889B06D500 /* Pods-PSFootball.release_coll.xcconfig */,
+				6D2EB7C94215E772A5B18494 /* Pods-PSFootball.release_test.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -83,7 +91,7 @@
 		ED25629420C57BEC004A6901 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ED25629320C57BEC004A6901 /* PSFootball.app */,
+				ED25629320C57BEC004A6901 /* PSFootballTest.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,6 +99,8 @@
 		ED25629520C57BEC004A6901 /* PSFootball */ = {
 			isa = PBXGroup;
 			children = (
+				ED58B09920C8175300A81131 /* Resources */,
+				ED58B09620C816A000A81131 /* Helper */,
 				ED25629620C57BEC004A6901 /* AppDelegate.swift */,
 				ED25629820C57BEC004A6901 /* ViewController.swift */,
 				ED25629A20C57BEC004A6901 /* Main.storyboard */,
@@ -102,12 +112,26 @@
 			path = PSFootball;
 			sourceTree = "<group>";
 		};
+		ED58B09620C816A000A81131 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				ED58B09720C816BE00A81131 /* PSFootballHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		ED58B09920C8175300A81131 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ED58B09A20C8176800A81131 /* Enumerations.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		ED7534A720C6D480001B7463 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				ED9C08EB20C6C04500E35E1E /* Debug.xcconfig */,
-				ED9C08ED20C6C05400E35E1E /* Test.xcconfig */,
-				ED9C08EF20C6C06100E35E1E /* Release_Prod.xcconfig */,
+				ED58B09420C815A600A81131 /* Config.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -132,7 +156,7 @@
 			);
 			name = PSFootball;
 			productName = PSFootball;
-			productReference = ED25629320C57BEC004A6901 /* PSFootball.app */;
+			productReference = ED25629320C57BEC004A6901 /* PSFootballTest.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -173,12 +197,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED9C08EC20C6C04500E35E1E /* Debug.xcconfig in Resources */,
-				ED9C08F020C6C06100E35E1E /* Release_Prod.xcconfig in Resources */,
 				ED2562A420C57BEE004A6901 /* LaunchScreen.storyboard in Resources */,
 				ED2562A120C57BEE004A6901 /* Assets.xcassets in Resources */,
 				ED25629C20C57BEC004A6901 /* Main.storyboard in Resources */,
-				ED9C08EE20C6C05400E35E1E /* Test.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +265,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED25629920C57BEC004A6901 /* ViewController.swift in Sources */,
+				ED58B09B20C8176800A81131 /* Enumerations.swift in Sources */,
+				ED58B09820C816BE00A81131 /* PSFootballHelper.swift in Sources */,
+				ED58B09520C815A600A81131 /* Config.swift in Sources */,
 				ED25629720C57BEC004A6901 /* AppDelegate.swift in Sources */,
 				ED25629F20C57BEC004A6901 /* PSFootball.xcdatamodeld in Sources */,
 			);
@@ -271,9 +295,8 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		ED2562A620C57BEE004A6901 /* Debug */ = {
+		ED2562A620C57BEE004A6901 /* Release_Coll */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED9C08EB20C6C04500E35E1E /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -330,11 +353,10 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Debug;
+			name = Release_Coll;
 		};
 		ED2562A720C57BEE004A6901 /* Release_Prod */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED9C08EF20C6C06100E35E1E /* Release_Prod.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -387,31 +409,39 @@
 			};
 			name = Release_Prod;
 		};
-		ED2562A920C57BEE004A6901 /* Debug */ = {
+		ED2562A920C57BEE004A6901 /* Release_Coll */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED9C08EB20C6C04500E35E1E /* Debug.xcconfig */;
+			baseConfigurationReference = 6B681EA4B502E9889B06D500 /* Pods-PSFootball.release_coll.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 48M6ZH39G5;
 				INFOPLIST_FILE = PSFootball/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.coco.PSFootball;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DCOLLAUDO";
+				PRODUCT_BUNDLE_IDENTIFIER = com.coco.PSFootballColl;
+				PRODUCT_NAME = PSFootballColl;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
-			name = Debug;
+			name = Release_Coll;
 		};
 		ED2562AA20C57BEE004A6901 /* Release_Prod */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED9C08EF20C6C06100E35E1E /* Release_Prod.xcconfig */;
+			baseConfigurationReference = 06F0A7CC2936866B37AFDC51 /* Pods-PSFootball.release_prod.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 48M6ZH39G5;
 				INFOPLIST_FILE = PSFootball/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DPRODUZIONE";
 				PRODUCT_BUNDLE_IDENTIFIER = com.coco.PSFootball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -419,9 +449,8 @@
 			};
 			name = Release_Prod;
 		};
-		ED9C08E920C6BC7000E35E1E /* Test */ = {
+		ED58B09C20C81DD900A81131 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED9C08ED20C6C05400E35E1E /* Test.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -478,23 +507,107 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Test;
+			name = Debug;
 		};
-		ED9C08EA20C6BC7000E35E1E /* Test */ = {
+		ED58B09D20C81DD900A81131 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED9C08ED20C6C05400E35E1E /* Test.xcconfig */;
+			baseConfigurationReference = 4F8BC588CD98B157D793067E /* Pods-PSFootball.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 48M6ZH39G5;
 				INFOPLIST_FILE = PSFootball/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.coco.PSFootball;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEBUG";
+				PRODUCT_BUNDLE_IDENTIFIER = com.coco.PSFootballTest;
+				PRODUCT_NAME = PSFootballTest;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
-			name = Test;
+			name = Debug;
+		};
+		ED9C08E920C6BC7000E35E1E /* Release_Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Release_Test;
+		};
+		ED9C08EA20C6BC7000E35E1E /* Release_Test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D2EB7C94215E772A5B18494 /* Pods-PSFootball.release_test.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 48M6ZH39G5;
+				INFOPLIST_FILE = PSFootball/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DTEST";
+				PRODUCT_BUNDLE_IDENTIFIER = com.coco.PSFootballTest;
+				PRODUCT_NAME = PSFootballTest;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release_Test;
 		};
 /* End XCBuildConfiguration section */
 
@@ -502,8 +615,9 @@
 		ED25628E20C57BEC004A6901 /* Build configuration list for PBXProject "PSFootball" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ED2562A620C57BEE004A6901 /* Debug */,
-				ED9C08E920C6BC7000E35E1E /* Test */,
+				ED2562A620C57BEE004A6901 /* Release_Coll */,
+				ED9C08E920C6BC7000E35E1E /* Release_Test */,
+				ED58B09C20C81DD900A81131 /* Debug */,
 				ED2562A720C57BEE004A6901 /* Release_Prod */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -512,8 +626,9 @@
 		ED2562A820C57BEE004A6901 /* Build configuration list for PBXNativeTarget "PSFootball" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ED2562A920C57BEE004A6901 /* Debug */,
-				ED9C08EA20C6BC7000E35E1E /* Test */,
+				ED2562A920C57BEE004A6901 /* Release_Coll */,
+				ED9C08EA20C6BC7000E35E1E /* Release_Test */,
+				ED58B09D20C81DD900A81131 /* Debug */,
 				ED2562AA20C57BEE004A6901 /* Release_Prod */,
 			);
 			defaultConfigurationIsVisible = 0;
