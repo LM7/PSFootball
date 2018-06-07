@@ -17,6 +17,11 @@
 		ED58B09520C815A600A81131 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED58B09420C815A600A81131 /* Config.swift */; };
 		ED58B09820C816BE00A81131 /* PSFootballHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED58B09720C816BE00A81131 /* PSFootballHelper.swift */; };
 		ED58B09B20C8176800A81131 /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED58B09A20C8176800A81131 /* Enumerations.swift */; };
+		EDB4645720C9C68A00D52066 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDB4645520C9C68A00D52066 /* MenuCell.xib */; };
+		EDB4645820C9C68A00D52066 /* SlideMenuHamView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDB4645620C9C68A00D52066 /* SlideMenuHamView.xib */; };
+		EDB4645A20C9C76900D52066 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4645920C9C76900D52066 /* Extensions.swift */; };
+		EDC9245F20C9C4A600CBC510 /* SlideMenuHamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9245E20C9C4A600CBC510 /* SlideMenuHamView.swift */; };
+		EDC9246120C9C61800CBC510 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9246020C9C61800CBC510 /* MenuCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +45,11 @@
 		ED58B09420C815A600A81131 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		ED58B09720C816BE00A81131 /* PSFootballHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSFootballHelper.swift; sourceTree = "<group>"; };
 		ED58B09A20C8176800A81131 /* Enumerations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerations.swift; sourceTree = "<group>"; };
+		EDB4645520C9C68A00D52066 /* MenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
+		EDB4645620C9C68A00D52066 /* SlideMenuHamView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlideMenuHamView.xib; sourceTree = "<group>"; };
+		EDB4645920C9C76900D52066 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		EDC9245E20C9C4A600CBC510 /* SlideMenuHamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenuHamView.swift; sourceTree = "<group>"; };
+		EDC9246020C9C61800CBC510 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +151,7 @@
 		EDAD278420C9489B003D5403 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				EDC9245D20C9C47500CBC510 /* SlideMenuHam */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -148,6 +159,7 @@
 		EDAD278520C948A1003D5403 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				EDB4645920C9C76900D52066 /* Extensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -182,6 +194,17 @@
 				ED25629D20C57BEC004A6901 /* PSFootball.xcdatamodeld */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		EDC9245D20C9C47500CBC510 /* SlideMenuHam */ = {
+			isa = PBXGroup;
+			children = (
+				EDC9246020C9C61800CBC510 /* MenuCell.swift */,
+				EDC9245E20C9C4A600CBC510 /* SlideMenuHamView.swift */,
+				EDB4645520C9C68A00D52066 /* MenuCell.xib */,
+				EDB4645620C9C68A00D52066 /* SlideMenuHamView.xib */,
+			);
+			path = SlideMenuHam;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,8 +268,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDB4645820C9C68A00D52066 /* SlideMenuHamView.xib in Resources */,
 				ED2562A420C57BEE004A6901 /* LaunchScreen.storyboard in Resources */,
 				ED2562A120C57BEE004A6901 /* Assets.xcassets in Resources */,
+				EDB4645720C9C68A00D52066 /* MenuCell.xib in Resources */,
 				ED25629C20C57BEC004A6901 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,10 +338,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED25629920C57BEC004A6901 /* ViewController.swift in Sources */,
+				EDB4645A20C9C76900D52066 /* Extensions.swift in Sources */,
 				ED58B09B20C8176800A81131 /* Enumerations.swift in Sources */,
 				ED58B09820C816BE00A81131 /* PSFootballHelper.swift in Sources */,
 				ED58B09520C815A600A81131 /* Config.swift in Sources */,
+				EDC9245F20C9C4A600CBC510 /* SlideMenuHamView.swift in Sources */,
 				ED25629720C57BEC004A6901 /* AppDelegate.swift in Sources */,
+				EDC9246120C9C61800CBC510 /* MenuCell.swift in Sources */,
 				ED25629F20C57BEC004A6901 /* PSFootball.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
