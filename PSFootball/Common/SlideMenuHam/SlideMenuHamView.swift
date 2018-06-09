@@ -34,7 +34,6 @@ class SlideMenuHamView: UIView {
             slideMenuHamView.tableView.register(MenuCell.cellNib(), forCellReuseIdentifier: MenuCell.cellIdentifier())
             
             slideMenuHamView.arrayMenuOptions.append("Home")
-            slideMenuHamView.arrayMenuOptions.append("Play")
             
             slideMenuHamView.loadGesture()
             
