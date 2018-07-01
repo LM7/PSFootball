@@ -13,6 +13,10 @@
 		ED25629F20C57BEC004A6901 /* PSFootball.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED25629D20C57BEC004A6901 /* PSFootball.xcdatamodeld */; };
 		ED2562A120C57BEE004A6901 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED2562A020C57BEE004A6901 /* Assets.xcassets */; };
 		ED2562A420C57BEE004A6901 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED2562A220C57BEE004A6901 /* LaunchScreen.storyboard */; };
+		ED2CC92220E0F98B00F4B624 /* trailerFifa19.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ED2CC92120E0F98B00F4B624 /* trailerFifa19.mp4 */; };
+		ED2CC92420E1130800F4B624 /* VideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CC92320E1130800F4B624 /* VideoManager.swift */; };
+		ED2CC92620E13CB600F4B624 /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED2CC92520E13CB600F4B624 /* AlertView.xib */; };
+		ED2CC92920E13CD900F4B624 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2CC92820E13CD900F4B624 /* AlertView.swift */; };
 		ED58B09520C815A600A81131 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED58B09420C815A600A81131 /* Config.swift */; };
 		ED58B09820C816BE00A81131 /* PSFootballHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED58B09720C816BE00A81131 /* PSFootballHelper.swift */; };
 		ED58B09B20C8176800A81131 /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED58B09A20C8176800A81131 /* Enumerations.swift */; };
@@ -20,6 +24,9 @@
 		ED5FF5C720CC06910054A155 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5FF5C620CC06910054A155 /* FirebaseManager.swift */; };
 		ED61A25A20CA969A0093A169 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED61A25920CA969A0093A169 /* BaseVC.swift */; };
 		ED61A25C20CA973B0093A169 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED61A25B20CA973B0093A169 /* HomeVC.swift */; };
+		ED6CAE8F20E2781400F471C6 /* CoreDataManagerPSF.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6CAE8E20E2781400F471C6 /* CoreDataManagerPSF.swift */; };
+		ED6CAE9120E27EB900F471C6 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6CAE9020E27EB900F471C6 /* LoadingView.swift */; };
+		ED6CAE9320E27EC600F471C6 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED6CAE9220E27EC600F471C6 /* LoadingView.xib */; };
 		ED71965A20CACFBF00744F79 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED71965920CACFBF00744F79 /* LoginVC.swift */; };
 		ED71965C20CACFD800744F79 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED71965B20CACFD800744F79 /* SignUpVC.swift */; };
 		ED71965E20CACFEC00744F79 /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED71965D20CACFEC00744F79 /* StartVC.swift */; };
@@ -49,6 +56,10 @@
 		ED2562A020C57BEE004A6901 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED2562A320C57BEE004A6901 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED2562A520C57BEE004A6901 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED2CC92120E0F98B00F4B624 /* trailerFifa19.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = trailerFifa19.mp4; sourceTree = "<group>"; };
+		ED2CC92320E1130800F4B624 /* VideoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoManager.swift; sourceTree = "<group>"; };
+		ED2CC92520E13CB600F4B624 /* AlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AlertView.xib; path = PSFootball/Common/View/AlertView.xib; sourceTree = SOURCE_ROOT; };
+		ED2CC92820E13CD900F4B624 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		ED58B09420C815A600A81131 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		ED58B09720C816BE00A81131 /* PSFootballHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSFootballHelper.swift; sourceTree = "<group>"; };
 		ED58B09A20C8176800A81131 /* Enumerations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerations.swift; sourceTree = "<group>"; };
@@ -56,6 +67,9 @@
 		ED5FF5C620CC06910054A155 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		ED61A25920CA969A0093A169 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		ED61A25B20CA973B0093A169 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		ED6CAE8E20E2781400F471C6 /* CoreDataManagerPSF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerPSF.swift; sourceTree = "<group>"; };
+		ED6CAE9020E27EB900F471C6 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		ED6CAE9220E27EC600F471C6 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		ED71965920CACFBF00744F79 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		ED71965B20CACFD800744F79 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		ED71965D20CACFEC00744F79 /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
@@ -136,6 +150,17 @@
 			path = PSFootball;
 			sourceTree = "<group>";
 		};
+		ED2CC92720E13CBE00F4B624 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ED2CC92820E13CD900F4B624 /* AlertView.swift */,
+				ED6CAE9020E27EB900F471C6 /* LoadingView.swift */,
+				ED2CC92520E13CB600F4B624 /* AlertView.xib */,
+				ED6CAE9220E27EC600F471C6 /* LoadingView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		ED58B09620C816A000A81131 /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,12 +172,13 @@
 		ED58B09920C8175300A81131 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				EDAD278A20C949B7003D5403 /* CoreData */,
-				ED7534A720C6D480001B7463 /* Config */,
-				ED2562A520C57BEE004A6901 /* Info.plist */,
+				ED2CC92120E0F98B00F4B624 /* trailerFifa19.mp4 */,
 				ED71965F20CAD38B00744F79 /* GoogleService-Info.plist */,
-				ED2562A020C57BEE004A6901 /* Assets.xcassets */,
+				ED2562A520C57BEE004A6901 /* Info.plist */,
 				ED58B09A20C8176800A81131 /* Enumerations.swift */,
+				ED2562A020C57BEE004A6901 /* Assets.xcassets */,
+				ED7534A720C6D480001B7463 /* Config */,
+				EDAD278A20C949B7003D5403 /* CoreData */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -196,8 +222,9 @@
 		EDAD278420C9489B003D5403 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				ED61A25820CA967C0093A169 /* ViewController */,
 				EDC9245D20C9C47500CBC510 /* SlideMenuHam */,
+				ED2CC92720E13CBE00F4B624 /* View */,
+				ED61A25820CA967C0093A169 /* ViewController */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -215,6 +242,8 @@
 			children = (
 				ED5FF5C620CC06910054A155 /* FirebaseManager.swift */,
 				EDC7556920CC1C0900DE620B /* DataManager.swift */,
+				ED2CC92320E1130800F4B624 /* VideoManager.swift */,
+				ED6CAE8E20E2781400F471C6 /* CoreDataManagerPSF.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -316,13 +345,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED2CC92620E13CB600F4B624 /* AlertView.xib in Resources */,
 				EDB4645820C9C68A00D52066 /* SlideMenuHamView.xib in Resources */,
 				ED2562A420C57BEE004A6901 /* LaunchScreen.storyboard in Resources */,
 				ED5FF5C520CBFFBD0054A155 /* Login.storyboard in Resources */,
+				ED2CC92220E0F98B00F4B624 /* trailerFifa19.mp4 in Resources */,
 				ED2562A120C57BEE004A6901 /* Assets.xcassets in Resources */,
 				EDB4645720C9C68A00D52066 /* MenuCell.xib in Resources */,
 				ED25629C20C57BEC004A6901 /* Main.storyboard in Resources */,
 				ED71966020CAD38C00744F79 /* GoogleService-Info.plist in Resources */,
+				ED6CAE9320E27EC600F471C6 /* LoadingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +386,8 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftVideoBackground/SwiftVideoBackground.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -362,6 +396,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftVideoBackground.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -405,11 +441,15 @@
 				ED58B09520C815A600A81131 /* Config.swift in Sources */,
 				EDC9245F20C9C4A600CBC510 /* SlideMenuHamView.swift in Sources */,
 				ED25629720C57BEC004A6901 /* AppDelegate.swift in Sources */,
+				ED6CAE8F20E2781400F471C6 /* CoreDataManagerPSF.swift in Sources */,
 				EDC9246120C9C61800CBC510 /* MenuCell.swift in Sources */,
 				ED71965E20CACFEC00744F79 /* StartVC.swift in Sources */,
 				ED25629F20C57BEC004A6901 /* PSFootball.xcdatamodeld in Sources */,
 				ED61A25C20CA973B0093A169 /* HomeVC.swift in Sources */,
 				ED61A25A20CA969A0093A169 /* BaseVC.swift in Sources */,
+				ED2CC92420E1130800F4B624 /* VideoManager.swift in Sources */,
+				ED6CAE9120E27EB900F471C6 /* LoadingView.swift in Sources */,
+				ED2CC92920E13CD900F4B624 /* AlertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +532,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release_Coll;
 		};
@@ -545,6 +586,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release_Prod;
@@ -557,10 +599,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 48M6ZH39G5;
 				INFOPLIST_FILE = PSFootball/Resources/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DCOLLAUDO";
 				PRODUCT_BUNDLE_IDENTIFIER = com.coco.PSFootballColl;
 				PRODUCT_NAME = PSFootballColl;
@@ -577,10 +616,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 48M6ZH39G5;
 				INFOPLIST_FILE = PSFootball/Resources/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DPRODUZIONE";
 				PRODUCT_BUNDLE_IDENTIFIER = com.coco.PSFootball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -646,6 +682,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -657,10 +694,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 48M6ZH39G5;
 				INFOPLIST_FILE = PSFootball/Resources/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.coco.PSFootballTest;
 				PRODUCT_NAME = PSFootballTest;
@@ -726,6 +760,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release_Test;
 		};
@@ -737,10 +772,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 48M6ZH39G5;
 				INFOPLIST_FILE = PSFootball/Resources/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DTEST";
 				PRODUCT_BUNDLE_IDENTIFIER = com.coco.PSFootballTest;
 				PRODUCT_NAME = PSFootballTest;

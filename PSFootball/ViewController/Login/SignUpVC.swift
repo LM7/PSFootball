@@ -9,6 +9,10 @@
 import UIKit
 import Firebase
 
+protocol SignUpVCDelegate: NSObjectProtocol {
+    func signUpSuccess()
+}
+
 class SignUpVC: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
@@ -16,12 +20,22 @@ class SignUpVC: UIViewController {
     @IBOutlet weak var newAccountButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     
+    weak var signUpVCDelegate: SignUpVCDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.loadTextField()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    // MARK: Private Functions
+    
+    private func loadTextField() {
+        self.emailTextField.attributedPlaceholder = NSAttributedString(string: "Email", attributes: [NSAttributedStringKey.foregroundColor : UIColor.white])
+        self.passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedStringKey.foregroundColor : UIColor.white])
     }
     
     // MARK: Actions
@@ -31,17 +45,28 @@ class SignUpVC: UIViewController {
             let email = self.emailTextField.text, !email.isEmpty,
             let password = self.passwordTextField.text, !password.isEmpty else { return }
         
+        Loading?.show()
+        
         FirebaseManager.createUser(email: email, password: password, success: { (user: Any) in
             if let userCurr = user as? User {
+                
+                Loading?.stop()
+                
                 DManager.user = userCurr
-                self.performSegue(withIdentifier: "StartVCSegueID", sender: self)
+                
+                self.dismiss(animated: true, completion: {
+                    self.signUpVCDelegate?.signUpSuccess()
+                })
             }
         }) { (error: Error) in
-            print(error)
+            Loading?.stop()
+            AlertView.showAlert(alertType: .error, message: error.localizedDescription)
         }
     }
     
     @IBAction func loginButtonAction(_ sender: Any) {
-        self
+        self.dismiss(animated: true) {
+            VideoManager.resume()
+        }
     }
 }

@@ -18,10 +18,11 @@ typealias FBMFailurVoidBlock = (() -> Void)
 class FirebaseManager {
     
     class func createUser(email: String, password: String, success: FBMSuccessBlock? = nil, failure: FBMFailureBlock? = nil) {
-        Auth.auth().createUser(withEmail: email, password: password) { (user: User?, error: Error?) in
+        
+        Auth.auth().createUser(withEmail: email, password: password) { (authDataResult: AuthDataResult?, error: Error?) in
             
-            if let userCurr = user {
-                success?(userCurr)
+            if let user = authDataResult?.user {
+                success?(user)
             } else if let errorCurr = error {
                 failure?(errorCurr)
             }
@@ -29,10 +30,11 @@ class FirebaseManager {
     }
     
     class func login(email: String, password: String, success: FBMSuccessBlock? = nil, failure: FBMFailureBlock? = nil) {
-        Auth.auth().signIn(withEmail: email, password: password) { (user: User?, error: Error?) in
+        
+        Auth.auth().signIn(withEmail: email, password: password) { (authDataResult: AuthDataResult?, error: Error?) in
             
-            if let userCurr = user {
-                success?(userCurr)
+            if let user = authDataResult?.user {
+                success?(user)
             } else if let errorCurr = error {
                 failure?(errorCurr)
             }

@@ -7,6 +7,8 @@ def shared_pods
     pod 'Firebase/Core'
     pod 'Firebase/Database'
     pod 'Firebase/Auth'
+    pod 'SwiftVideoBackground'
+    pod 'NVActivityIndicatorView'
 end
 
 target 'PSFootball' do

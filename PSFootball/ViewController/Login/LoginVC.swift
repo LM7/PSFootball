@@ -18,10 +18,24 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.loadTextField()
+        self.loadVideo()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    // MARK: Private Functions
+    
+    private func loadTextField() {
+        self.emailTextField.attributedPlaceholder = NSAttributedString(string: "Email", attributes: [NSAttributedStringKey.foregroundColor : UIColor.white])
+        self.passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedStringKey.foregroundColor : UIColor.white])
+    }
+    
+    private func loadVideo() {
+        VideoManager.getVideoWithAudio(view: self.view, nameVideo: "trailerFifa19")
     }
     
     // MARK: Actions
@@ -31,17 +45,38 @@ class LoginVC: UIViewController {
             let email = self.emailTextField.text, !email.isEmpty,
             let password = self.passwordTextField.text, !password.isEmpty else { return }
         
+        Loading?.show()
+        
         FirebaseManager.login(email: email, password: password, success: { (user: Any) in
             if let userCurr = user as? User {
+                
+                Loading?.stop()
+                
                 DManager.user = userCurr
+                VideoManager.pause()
+                
                 self.performSegue(withIdentifier: "StartVCSegueID", sender: self)
             }
         }) { (error: Error) in
-            print(error)
+            Loading?.stop()
+            
+            AlertView.showAlert(alertType: .error, message: error.localizedDescription)
         }
     }
     
     @IBAction func signupButtonAction(_ sender: Any) {
-        self.performSegue(withIdentifier: "SignUpVCSegueID", sender: self)
+        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "SignUpVCID") as? SignUpVC {
+            vc.signUpVCDelegate = self
+            
+            self.present(vc, animated: true) {
+                VideoManager.pause()
+            }
+        }
+    }
+}
+
+extension LoginVC: SignUpVCDelegate {
+    func signUpSuccess() {
+        self.performSegue(withIdentifier: "StartVCSegueID", sender: self)
     }
 }

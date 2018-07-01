@@ -13,3 +13,15 @@ enum EnvironmentType {
     case coll
     case prod
 }
+
+enum AlertType: String {
+    
+    case success = "COMPLIMENTI"
+    case error = "ATTENZIONE"
+}
+
+enum PaletteLevel: Float {
+    case dark = 1.0
+    case medium = 0.5
+    case light = 0.25
+}
