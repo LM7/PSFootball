@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 
 protocol SignUpVCDelegate: NSObjectProtocol {
     func signUpSuccess()
@@ -24,7 +25,14 @@ class SignUpVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.loadTextField()
+        self.loadGesture()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        PSFootballHelper.trackAnswers(withName: "SignUpVC")
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,6 +46,15 @@ class SignUpVC: UIViewController {
         self.passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedStringKey.foregroundColor : UIColor.white])
     }
     
+    private func loadGesture() {
+        let tapDismiss = UITapGestureRecognizer(target: self, action: #selector(self.dismissEverything))
+        self.view.addGestureRecognizer(tapDismiss)
+    }
+    
+    @objc func dismissEverything() {
+        self.view.endEditing(true)
+    }
+    
     // MARK: Actions
 
     @IBAction func newAccountButtonAction(_ sender: Any) {
@@ -48,11 +65,29 @@ class SignUpVC: UIViewController {
         Loading?.show()
         
         FirebaseManager.createUser(email: email, password: password, success: { (user: Any) in
-            if let userCurr = user as? User {
+            if let _ = user as? User {
                 
                 Loading?.stop()
                 
-                DManager.user = userCurr
+                let psUser = CoreDataHelper.createPSUser()
+                psUser?.username = email
+                psUser?.password = password
+                
+                DManager.user = psUser
+                cdmPSF.saveMainMOC()
+                
+                if
+                    let _ = PSFootballHelper.getFromKeychain(key: "email"),
+                    let _ = PSFootballHelper.getFromKeychain(key: "password") {
+                    //NOP
+                } else {
+                    _ = PSFootballHelper.saveOnKeychain(key: "email", value: email)
+                    _ = PSFootballHelper.saveOnKeychain(key: "password", value: password)
+                }
+                
+                AlertView.showAlert(alertType: AlertType.success, message: "Ti sei registrato!")
+                
+                self.dismissEverything()
                 
                 self.dismiss(animated: true, completion: {
                     self.signUpVCDelegate?.signUpSuccess()
@@ -65,6 +100,7 @@ class SignUpVC: UIViewController {
     }
     
     @IBAction func loginButtonAction(_ sender: Any) {
+        self.dismissEverything()
         self.dismiss(animated: true) {
             VideoManager.resume()
         }

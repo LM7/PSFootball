@@ -20,6 +20,11 @@ class SlideMenuHamView: UIView {
     
     weak var slideMenuHamDelegate: SlideMenuHamDelegate?
     
+    let trailingMenu: CGFloat = 150.0
+    
+    var currentView: UIView?
+    var currentNavigationBar: UINavigationBar?
+    var tap: UITapGestureRecognizer?
     var arrayMenuOptions = [String]()
     
     var isOpen = false
@@ -30,25 +35,25 @@ class SlideMenuHamView: UIView {
             
             slideMenuHamView.tableView.delegate = slideMenuHamView
             slideMenuHamView.tableView.dataSource = slideMenuHamView
-            
             slideMenuHamView.tableView.register(MenuCell.cellNib(), forCellReuseIdentifier: MenuCell.cellIdentifier())
             
-            slideMenuHamView.arrayMenuOptions.append("Home")
+            slideMenuHamView.frame = CGRect(x: -UIScreen.main.bounds.size.width, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
             
-            slideMenuHamView.loadGesture()
+            slideMenuHamView.loadShadow()
+            
+            slideMenuHamView.arrayMenuOptions.append(SlideMenuHamOptionType.menuHome.getDescriptionForMenu())
+            slideMenuHamView.arrayMenuOptions.append(SlideMenuHamOptionType.logout.getDescriptionForMenu())
             
             return slideMenuHamView
         }
         return nil
     }
     
-    private func loadGesture() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
-        self.contentView.addGestureRecognizer(tap)
-    }
-    
-    @objc func handleTap() {
-        self.closeMenu()
+    private func loadShadow() {
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOpacity = 1
+        self.layer.shadowOffset = CGSize.zero
+        self.layer.shadowRadius = 10
     }
     
     func openMenu() {
@@ -59,15 +64,17 @@ class SlideMenuHamView: UIView {
             
             win.addSubview(self)
             
-            self.layoutIfNeeded()
-            
-            self.frame = CGRect(x: 0 - UIScreen.main.bounds.size.width, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
-            
             UIView.animate(withDuration: 0.3, animations: { () -> Void in
                 
-                self.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
+                self.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width - self.trailingMenu, height: UIScreen.main.bounds.size.height)
                 
-            }, completion:nil)
+                self.currentNavigationBar?.frame = CGRect(x: UIScreen.main.bounds.size.width - self.trailingMenu, y: 20.0, width: UIScreen.main.bounds.size.width, height: self.currentNavigationBar?.frame.height ?? 0.0)
+                
+                self.currentView?.frame = CGRect(x: UIScreen.main.bounds.size.width - self.trailingMenu, y: 0.0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
+                
+                self.layoutIfNeeded()
+                
+            }, completion: nil)
         }
     }
     
@@ -78,6 +85,11 @@ class SlideMenuHamView: UIView {
         UIView.animate(withDuration: 0.3, animations: { () -> Void in
             
             self.frame = CGRect(x: -UIScreen.main.bounds.size.width, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
+            
+            self.currentView?.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
+            
+            self.currentNavigationBar?.frame = CGRect(x: 0, y: 20.0, width: UIScreen.main.bounds.size.width, height: self.currentNavigationBar?.frame.height ?? 0.0)
+
             self.layoutIfNeeded()
             
         }, completion: { (finished) -> Void in

@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (4.7.2)
+  - Crashlytics (3.10.3):
+    - Fabric (~> 1.7.8)
+  - Fabric (1.7.8)
   - Firebase/Auth (5.3.0):
     - Firebase/CoreOnly
     - FirebaseAuth (= 5.0.1)
@@ -39,18 +42,24 @@ PODS:
   - NVActivityIndicatorView (4.2.1):
     - NVActivityIndicatorView/Presenter (= 4.2.1)
   - NVActivityIndicatorView/Presenter (4.2.1)
+  - SwiftKeychainWrapper (3.0.1)
   - SwiftVideoBackground (3.0.0)
 
 DEPENDENCIES:
   - Alamofire
+  - Crashlytics
+  - Fabric
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - NVActivityIndicatorView
+  - SwiftKeychainWrapper
   - SwiftVideoBackground
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  Crashlytics: 2aea305161a2122492698c75af27f2b98aa49a25
+  Fabric: fba4684a95df789565b0b27fc5b6e68f1755af32
   Firebase: 68afeeb05461db02d7c9e3215cda28068670f4aa
   FirebaseAnalytics: b3628aea54c50464c32c393fb2ea032566e7ecc2
   FirebaseAuth: 463b8ce33bd5d05f706dcd4615499e3212b4132b
@@ -62,8 +71,9 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   NVActivityIndicatorView: 8068ba3ad39cb44cbaab25d89ff2546b3f092681
+  SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
   SwiftVideoBackground: 15c69b74458ad57f123c52f55a5bf6865eaf4eae
 
-PODFILE CHECKSUM: 8a3125a2f4878edcf852f3aa5bee53c168349912
+PODFILE CHECKSUM: eab95319e5217580e51cd244d95d089968853abc
 
 COCOAPODS: 1.4.0

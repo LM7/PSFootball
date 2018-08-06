@@ -40,4 +40,28 @@ class FirebaseManager {
             }
         }
     }
+    
+    class func logout() throws {
+        try? Auth.auth().signOut()
+    }
+    
+    class func getCurrentUser() -> User? {
+        return Auth.auth().currentUser
+    }
+    
+    class func getReferenceDB() -> DatabaseReference {
+        return Database.database().reference()
+    }
+    
+    class func getReferenceDBUsers() -> DatabaseReference {
+        let ref = self.getReferenceDB()
+        return ( ref.child("NODO_USERS".localized) )
+    }
+    
+    class func getReferenceDBUserUID() -> DatabaseReference? {
+        guard let currentUser: User = FirebaseManager.getCurrentUser() else { return nil }
+        
+        let refUsers = self.getReferenceDBUsers()
+        return ( refUsers.child(currentUser.uid) )
+    }
 }

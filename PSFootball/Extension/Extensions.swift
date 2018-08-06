@@ -68,11 +68,43 @@ extension UIColor {
             return UIColor(red: 255.0/255, green: 51.0/255, blue: 0.0/255, alpha: 1.0)
         }
     }
+    
+    class func orangePalette(level: PaletteLevel) -> UIColor {
+        switch level {
+        case .dark:
+            return UIColor(red: 255.0/255, green: 102.0/255, blue: 0.0/255, alpha: 1.0)
+        case .medium:
+            return UIColor(red: 255.0/255, green: 153.0/255, blue: 0.0/255, alpha: 1.0)
+        case .light:
+            return UIColor(red: 255.0/255, green: 153.0/255, blue: 51.0/255, alpha: 1.0)
+        }
+        
+    }
+}
+
+// MARK: String
+
+extension String {
+    var localized: String {
+        return NSLocalizedString(self, tableName: nil, bundle: Bundle.main, value: "", comment: "")
+    }
 }
 
 // MARK: UITableViewCell
 
 extension UITableViewCell {
+    class func cellIdentifier() -> String {
+        return String(describing: self)
+    }
+    
+    class func cellNib() -> UINib {
+        return UINib.init(nibName: cellIdentifier(), bundle: nil)
+    }
+}
+
+// MARK: UICollectionViewCell
+
+extension UICollectionViewCell {
     class func cellIdentifier() -> String {
         return String(describing: self)
     }

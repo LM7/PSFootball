@@ -19,21 +19,25 @@ class LoadingView: UIView {
     var activityData: ActivityData?
     
     class func getView() -> LoadingView? {
-        if
-            let window = (UIApplication.shared.delegate?.window) as? UIWindow,
-            let loadingView = Bundle.main.loadNibNamed("LoadingView", owner: nil, options: nil)?.first as? LoadingView {
-            
-            loadingView.activityData = ActivityData(size: loadingView.indicatorView.frame.size, type: NVActivityIndicatorType.ballTrianglePath, color: UIColor.bluePalette(level: .medium))
-            
-            window.addSubview(loadingView)
-            
-            return loadingView
-        }
+        guard let loadingView = Bundle.main.loadNibNamed("LoadingView", owner: nil, options: nil)?.first as? LoadingView else { return nil }
+
+            if let window = (UIApplication.shared.delegate?.window) as? UIWindow {
+                
+                loadingView.activityData = ActivityData(size: loadingView.indicatorView.frame.size, type: NVActivityIndicatorType.ballTrianglePath, color: UIColor.bluePalette(level: .medium))
+                loadingView.frame = window.bounds
+                
+                return loadingView
+            }
         return nil
     }
     
     func show() {
-        if let activityData = self.activityData {
+        DispatchQueue.main.async {
+            guard
+                let window = (UIApplication.shared.delegate?.window) as? UIWindow,
+                let activityData = self.activityData  else { return }
+            
+            window.addSubview(self)
             NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)
         }
     }

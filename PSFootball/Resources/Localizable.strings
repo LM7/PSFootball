@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  PSFootball
+
+  Created by Lorenzo on 12/07/18.
+  Copyright © 2018 Lorenzo. All rights reserved.
+*/
+
+// FIREBASE
+
+"NODO_USERS" = "users";
+"USERNAME" = "username";

@@ -29,11 +29,11 @@
                 </view>
             </subviews>
             <constraints>
-                <constraint firstItem="yZe-v0-sbb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="72m-7E-nEe"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="yZe-v0-sbb" secondAttribute="trailing" id="FoC-IQ-Bsa"/>
+                <constraint firstAttribute="bottom" secondItem="yZe-v0-sbb" secondAttribute="bottom" id="1Pe-HS-0eJ"/>
                 <constraint firstItem="pCk-I0-6xL" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="SQf-8W-AnG"/>
                 <constraint firstItem="pCk-I0-6xL" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ScL-rH-CKX"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="yZe-v0-sbb" secondAttribute="bottom" id="qMl-Q8-az9"/>
+                <constraint firstAttribute="trailing" secondItem="yZe-v0-sbb" secondAttribute="trailing" id="rCw-dy-kEa"/>
+                <constraint firstItem="yZe-v0-sbb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="tXt-J9-4lB"/>
                 <constraint firstItem="yZe-v0-sbb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zD0-5d-cvS"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

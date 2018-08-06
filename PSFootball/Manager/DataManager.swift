@@ -15,5 +15,6 @@ class DataManager {
     
     static let getInstance = DataManager()
     
-    var user: User?
+    var user: PSUser?
+    var isMenuHome = false
 }

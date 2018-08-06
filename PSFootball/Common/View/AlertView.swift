@@ -10,6 +10,7 @@ import UIKit
 
 class AlertView: UIView {
     
+    @IBOutlet weak var alertMainView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var okButton: UIButton!
@@ -30,6 +31,8 @@ class AlertView: UIView {
     }
     
     private func loadGraphic(alertType: AlertType) {
+        self.backgroundColor = UIColor.clear
+        self.alertMainView.layer.cornerRadius = 10.0
         self.okButton.layer.cornerRadius = 6.0
         self.titleLabel.textColor = (alertType == AlertType.error) ? UIColor.redPalette(level: .medium) : UIColor.bluePalette(level: .medium)
     }
