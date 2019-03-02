@@ -45,25 +45,16 @@ enum SlideMenuHamOptionType: Int {
 
 enum MenuOptionType: String {
     
-    case alboOro = "ALBO D'ORO"
-    case ranking = "RANKING"
-    case competizioni = "COMPETIZIONI"
-    case storia = "STORIA DEI CLUB"
+    case fifa98 = "FIFA 98"
+    case fifa99 = "FIFA 99"
+    case fifa2000 = "FIFA 2000"
+    case fifa2001 = "FIFA 2001"
     
     func getNameImage() -> String {
         switch self {
             
-        case .alboOro:
-            return "alboOro"
-            
-        case .ranking:
-            return "ranking"
-            
-        case .competizioni:
-            return "competizione"
-            
-        case .storia:
-            return "storiaClub"
+        case .fifa98, .fifa99, .fifa2000, .fifa2001:
+            return "easports"
         }
     }
 }

@@ -13,6 +13,8 @@ import Crashlytics
 
 class PSFootballHelper {
     
+    // MARK: For Device
+    
     class func getSafeAreaTopLeft() -> CGFloat?  {
         if #available(iOS 11.0, *) {
             if let safeAreaInsetsTop = UIApplication.shared.windows.first?.safeAreaInsets.top, safeAreaInsetsTop != 0  {
@@ -22,6 +24,14 @@ class PSFootballHelper {
             }
         }
         return nil
+    }
+    
+    class func getWidthDevice() -> CGFloat {
+        return UIScreen.main.bounds.width
+    }
+    
+    class func getHeightDevice() -> CGFloat {
+        return UIScreen.main.bounds.height
     }
     
     // MARK: Answers

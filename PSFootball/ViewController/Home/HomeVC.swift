@@ -24,8 +24,6 @@ class HomeVC: BaseVC {
         
         self.collectionView.register(HomeCell.cellNib(), forCellWithReuseIdentifier: HomeCell.cellIdentifier())
         self.loadDataSource()
-        
-        self.loadLongPressGesture()
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,62 +44,34 @@ class HomeVC: BaseVC {
     
     // MARK: Private Functions
     private func loadDataSource() {
-        self.dataSource.append((title: MenuOptionType.alboOro.rawValue, nameImage: MenuOptionType.alboOro.getNameImage()))
-        self.dataSource.append((title: MenuOptionType.ranking.rawValue, nameImage: MenuOptionType.ranking.getNameImage()))
-        self.dataSource.append((title: MenuOptionType.competizioni.rawValue, nameImage: MenuOptionType.competizioni.getNameImage()))
-        self.dataSource.append((title: MenuOptionType.storia.rawValue, nameImage: MenuOptionType.storia.getNameImage()))
-    }
-    
-    // MARK: LongPressGesture & Drag&Drop
-    
-    private func loadLongPressGesture() {
-        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(HomeVC.dragDropGesture(gesture:)))
-        self.collectionView.addGestureRecognizer(longPressGesture)
-    }
-    
-    @objc func dragDropGesture(gesture: UILongPressGestureRecognizer) {
-        
-        switch(gesture.state) {
-            
-        case .began:
-            guard let selectedIndexPath = self.collectionView.indexPathForItem(at: gesture.location(in: self.collectionView)) else {
-                break
-            }
-            self.collectionView.beginInteractiveMovementForItem(at: selectedIndexPath)
-            
-        case .changed:
-            self.collectionView.updateInteractiveMovementTargetPosition(gesture.location(in: gesture.view!))
-            
-        case .ended:
-            self.collectionView.endInteractiveMovement()
-            
-        default:
-            self.collectionView.cancelInteractiveMovement()
-        }
+        self.dataSource.append((title: MenuOptionType.fifa98.rawValue, nameImage: MenuOptionType.fifa98.getNameImage()))
+        self.dataSource.append((title: MenuOptionType.fifa99.rawValue, nameImage: MenuOptionType.fifa99.getNameImage()))
+        self.dataSource.append((title: MenuOptionType.fifa2000.rawValue, nameImage: MenuOptionType.fifa2000.getNameImage()))
+        self.dataSource.append((title: MenuOptionType.fifa2001.rawValue, nameImage: MenuOptionType.fifa2001.getNameImage()))
     }
     
     private func goToVCfromType(menuOption: MenuOptionType) {
         switch menuOption {
             
-        case .alboOro:
+        case .fifa98:
             let storyboard = UIStoryboard(name: "AlboOro", bundle: nil)
             if let alboOroMenuVC = storyboard.instantiateViewController(withIdentifier: "AlboOroMenuVCID") as? AlboOroMenuVC {
                 self.navigationController?.pushViewController(alboOroMenuVC, animated: true)
             }
             
-        case .competizioni:
+        case .fifa99:
             let storyboard = UIStoryboard(name: "Competizioni", bundle: nil)
             if let competizioniMenuVC = storyboard.instantiateViewController(withIdentifier: "CompetizioniMenuVCID") as? CompetizioniMenuVC {
                 self.navigationController?.pushViewController(competizioniMenuVC, animated: true)
             }
             
-        case .ranking:
+        case .fifa2000:
             let storyboard = UIStoryboard(name: "Ranking", bundle: nil)
             if let rankingMenuVC = storyboard.instantiateViewController(withIdentifier: "RankingMenuVCID") as? RankingMenuVC {
                 self.navigationController?.pushViewController(rankingMenuVC, animated: true)
             }
             
-        case .storia:
+        case .fifa2001:
             let storyboard = UIStoryboard(name: "StoriaClub", bundle: nil)
             if let storiaClubMenuVC = storyboard.instantiateViewController(withIdentifier: "StoriaClubMenuVCID") as? StoriaClubMenuVC {
                 self.navigationController?.pushViewController(storiaClubMenuVC, animated: true)
@@ -134,20 +104,27 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollec
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let constantWidth = (1 / 5) * view.frame.width
-        let availableWidth = view.frame.width - constantWidth
-        let widthPerItem = availableWidth / 2
+        let widthCell = (PSFootballHelper.getWidthDevice() / 2.0) - 10
+        let heightCell: CGFloat = 200.0
         
-        return CGSize(width: widthPerItem, height: HomeCell.getHeight())
+        return CGSize(width: widthCell, height: heightCell)
+        
+//        let constantWidth = (1 / 5) * view.frame.width
+//        let availableWidth = view.frame.width - constantWidth
+//        let widthPerItem = availableWidth / 2
+//
+//        return CGSize(width: widthPerItem, height: HomeCell.getHeight())
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         
-        let constantWidth = (4 / 5) * view.frame.width
-        let availableWidth = view.frame.width - constantWidth
-        let widthPerItem = availableWidth / 3
+        return UIEdgeInsets(top: 0.0, left: 5.0, bottom: 0.0, right: 5.0)
         
-        return UIEdgeInsets(top: 50.0, left: widthPerItem, bottom: 20.0, right: widthPerItem)
+//        let constantWidth = (4 / 5) * view.frame.width
+//        let availableWidth = view.frame.width - constantWidth
+//        let widthPerItem = availableWidth / 3
+//
+//        return UIEdgeInsets(top: 50.0, left: widthPerItem, bottom: 20.0, right: widthPerItem)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -159,16 +136,4 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollec
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
 //        return 10.0
 //    }
-    
-    // DRAG & DROP
-    
-    func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        let firstTemp = self.dataSource[sourceIndexPath.item]
-        self.dataSource[sourceIndexPath.item] = self.dataSource[destinationIndexPath.item]
-        self.dataSource[destinationIndexPath.item] = firstTemp
-    }
 }
